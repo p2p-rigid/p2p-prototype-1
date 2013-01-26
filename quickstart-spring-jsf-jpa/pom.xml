@@ -44,6 +44,8 @@
     
     <maven.compiler.plugin>2.3.2</maven.compiler.plugin>
     <maven.failsafe.plugin>2.4.3-alpha-1</maven.failsafe.plugin>
+    
+    <org.cloudfoundry-version>0.7.1</org.cloudfoundry-version>
         
   </properties>
 	
@@ -73,6 +75,24 @@
 		          </execution>
 		        </executions>
 		      </plugin>
+		      <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.7</version>  <!-- Note 2.8 does not work with AspectJ aspect path -->
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>false</downloadJavadocs>
+					<wtpversion>2.0</wtpversion>
+					<additionalBuildcommands>
+						<buildCommand>
+							<name>org.springframework.ide.eclipse.core.springbuilder</name>
+						</buildCommand>
+					</additionalBuildcommands>
+					<additionalProjectnatures>
+						<projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
+					</additionalProjectnatures>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 	
@@ -111,7 +131,13 @@
   </repositories>
   
   <dependencies>
-  
+  	
+  	<!-- CloudFoundry -->
+	<dependency>
+		<groupId>org.cloudfoundry</groupId>
+		<artifactId>cloudfoundry-runtime</artifactId>
+		<version>${org.cloudfoundry-version}</version>
+	</dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

@@ -12,6 +12,11 @@
   </welcome-file-list>
   
   <context-param>
+		<param-name>contextInitializerClasses</param-name>
+		<param-value>com.sivalabs.springjsfjpa.services.CloudApplicationContextInitializer</param-value>
+  </context-param>
+  
+  <context-param>
 		<param-name>facelets.DEVELOPMENT</param-name>
 		<param-value>true</param-value>
 	</context-param>
