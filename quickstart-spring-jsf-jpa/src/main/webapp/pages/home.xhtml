@@ -5,16 +5,31 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	template="/WEB-INF/templates/template.xhtml"
 	xmlns:p="http://primefaces.org/ui">
-	
+
 	<ui:define name="content">
-		<p:dataTable var="user" value="#{userController.users}">
-			<p:column headerText="UsersID"> 
-				<h:outputText value="#{user.userId}" /> 
-			</p:column>
-			<p:column headerText="Users Name" > 
-				<h:outputText value="#{user.userName}" /> 
-			</p:column>
-		</p:dataTable>
-	
+		<p:tabView id="tabView">
+
+			<p:tab id="tab1" title="找人带东东">
+				
+			</p:tab>
+
+			<p:tab id="tab2" title="帮人带东东">
+				
+			</p:tab>
+
+			<p:tab id="tab3" title="找人运东西（本地服务）">
+				
+			</p:tab>
+			
+			<p:tab id="tab3" title="帮人运东西（本地服务）">
+				
+			</p:tab>
+			
+			<p:tab id="tab3" title="我急急急！！！">
+				
+			</p:tab>
+
+		</p:tabView>
+
 	</ui:define>
 </ui:composition>
