@@ -7,14 +7,17 @@
 <h:head>
 	<title>Spring + JSF2</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="shortcut icon" 
-		href="http://gumtree.classistatic.com/master-96678d086f5afb3ef2553b47192c311f742141a7/img/au/gumtreeFavicon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="http://www.chine-nouvelle.com/jdd/public/documents/favicon.ico" />
 	<link rel="stylesheet" type="text/css" 
             href="${facesContext.externalContext.requestContextPath}/resources/css/screen.css"/>
 </h:head>
 <h:body>
 	<h:panelGroup id="page" layout="block" style="margin-top: 20px;">
-		<h:panelGroup id="header" layout="block">
+		<h:panelGroup id="header" layout="block" style="position:relative">
+				<div id="top-menu-link" style="height: 25%;width: 60%; margin-left : 11%; position: absolute; bottom:0;">
+				  	<h:link value="国际服务" outcome="/pages/international" id="international-service-menu"></h:link>
+				  	<h:link value="本地服务" outcome="/pages/domestic" id="domestic-service-menu"></h:link>
+				</div>
 		</h:panelGroup>
 		<h:panelGroup id="container" layout="block" >
 			<h:panelGroup id="content" layout="block" style="margin:0 auto">

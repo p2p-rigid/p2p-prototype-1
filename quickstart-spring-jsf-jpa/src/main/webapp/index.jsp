@@ -1,1 +1,1 @@
-<% response.sendRedirect("pages/home.jsf"); %>
+<% response.sendRedirect("pages/international.jsf"); %>

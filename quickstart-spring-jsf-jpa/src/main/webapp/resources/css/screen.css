@@ -10,11 +10,11 @@ body {
 	height: 120px;
 	background: rgb(255, 254, 225) url("../images/wrapper_bkg.png") repeat-x;
 	border-bottom: solid 1px #a0a0a0;
-	text-align: center;
 	color: #000000;
 	margin: 0;
 	padding: 0;
 }
+
 
 #header h1 {
 	padding-top: 24px;
@@ -22,7 +22,11 @@ body {
 }
 
 #header a {
-	color : #f0f0f0;
+	margin-left: 0.6em;
+	font-size:2em;
+	font-style:normal;
+	font-weight:bold;
+	color : rgba(248, 16, 16, 0.52);
 }
 
 #page {
@@ -52,9 +56,9 @@ body {
 }
 
 #content {
-	min-height: 320px;
+	min-height: 600px;
 	font-size: 120%;
-	width: 720px;
+	width: 80%;
 }
 
 #footer {
