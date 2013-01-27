@@ -44,8 +44,9 @@
     
     <maven.compiler.plugin>2.3.2</maven.compiler.plugin>
     <maven.failsafe.plugin>2.4.3-alpha-1</maven.failsafe.plugin>
-    
+
     <org.cloudfoundry-version>0.7.1</org.cloudfoundry-version>
+    <spring-security.version>3.0.7.RELEASE</spring-security.version>
         
   </properties>
 	
@@ -91,6 +92,10 @@
 					<additionalProjectnatures>
 						<projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
 					</additionalProjectnatures>
+					<additionalProjectFacets>
+						<jst.jsf>2.0</jst.jsf>
+						<jst.web>2.5</jst.web>
+					</additionalProjectFacets>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -268,8 +273,29 @@
                 <artifactId>spring-test</artifactId>
                 <version>${spring.version}</version>
                 <scope>test</scope>
+		    </dependency>
+		
+			<dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-core</artifactId>
+                <version>${spring-security.version}</version>
             </dependency>
-            
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-web</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-config</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-taglibs</artifactId>
+                <version>${spring-security.version}</version>
+                <scope>compile</scope>
+            </dependency>
             <dependency>
 	            <groupId>org.springframework.data</groupId>
 	            <artifactId>spring-data-jpa</artifactId>
