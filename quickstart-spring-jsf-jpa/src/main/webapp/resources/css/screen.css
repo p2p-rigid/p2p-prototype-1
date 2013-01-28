@@ -23,10 +23,12 @@ body {
 
 #header a {
 	margin-left: 0.6em;
-	font-size:2em;
+	/*font-size:2em;
 	font-style:normal;
-	font-weight:bold;
-	color : rgba(248, 16, 16, 0.52);
+	font-weight:bold; */
+	font: 2em/1.5 tahoma,arial,宋体b8b\4f53;
+	font-weight: bold;
+	color : rgba(19, 0, 252, 0.52);
 }
 
 #page {
@@ -134,3 +136,24 @@ body {
 .property {
 	margin-bottom: 12px;
 }
+
+
+.international-search-table td {
+	border-width: 0px;
+	border-color: inherit;
+	padding: 4px 10px;
+}
+
+.international-search-table tr {
+	border-width: 0px;
+	border-color: inherit;
+}
+
+#top-menu-link {
+	height: 40%;
+	width: 60%; 
+	margin-left : 11%; 
+	position: absolute; 
+	bottom:0;
+}
+

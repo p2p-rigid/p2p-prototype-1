@@ -7,21 +7,30 @@
 	xmlns:p="http://primefaces.org/ui">
 
 	<ui:define name="content">
-		<p:tabView id="tabView">
-
-			<p:tab id="tab1" title="找人带东东">
+			<p:tabView id="tabView">
+					<p:tab id="international-search-tab-1" title="找人带东东">  <!-- 找人带东东 -->
+						<h:form>	
+							<p:panelGrid columns="4" style="margin-top: 2em" id="it-search-table-1" styleClass="international-search-table">  
+							    <h:outputLabel for="from" value="From: *" />  
+							    <p:inputText id="from" value="" label="from" />  
+							    <h:outputLabel for="to" value="To: *" />  
+							    <p:inputText id="to" value="" required="true" label="to"/>  
+							</p:panelGrid>  
+							
+							<p:panelGrid columns="2" style="margin-top: 1em" id="it-search-table-2" styleClass="international-search-table">  
+							    <h:outputLabel for="what" value="What: *" />  
+							    <p:inputText id="what" value="" label="what" />  
+							</p:panelGrid>
+						</h:form>
+					</p:tab>
+				<p:tab id="international-search-tab-2" title="帮人带东东">
+					
+				</p:tab>
 				
-			</p:tab>
-
-			<p:tab id="tab2" title="帮人带东东">
-				
-			</p:tab>
-			
-			<p:tab id="tab5" title="我急急急！！！">
-				
-			</p:tab>
-
-		</p:tabView>
-
+				<p:tab id="international-search-tab-3" title="我急急急！！！">
+					
+				</p:tab>
+	
+			</p:tabView>
 	</ui:define>
 </ui:composition>

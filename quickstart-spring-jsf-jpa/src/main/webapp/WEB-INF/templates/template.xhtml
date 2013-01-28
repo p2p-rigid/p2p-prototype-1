@@ -10,13 +10,48 @@
 	<link rel="shortcut icon" type="image/x-icon" href="http://www.chine-nouvelle.com/jdd/public/documents/favicon.ico" />
 	<link rel="stylesheet" type="text/css" 
             href="${facesContext.externalContext.requestContextPath}/resources/css/screen.css"/>
+     <script type="text/javascript">
+	     
+     $(document).ready(function(){
+	     	var currentUrl = window.location.pathname;
+	     	var activeColor = "rgba(250, 6, 45, 0.52)";
+	    	if ((new RegExp('international')).test(currentUrl)) {
+	    		console.log('international');
+	    		$("#international-search-menu-link").css("color", activeColor)
+     		} else if((new RegExp('domestic')).test(currentUrl)) {
+     			console.log('domestic');
+     			$("#domestic-search-menu-link").css("color", activeColor)
+     			
+     		}
+	     });
+     </script>       
 </h:head>
 <h:body>
 	<h:panelGroup id="page" layout="block" style="margin-top: 20px;">
 		<h:panelGroup id="header" layout="block" style="position:relative">
-				<div id="top-menu-link" style="height: 25%;width: 60%; margin-left : 11%; position: absolute; bottom:0;">
-				  	<h:link value="国际服务" outcome="/pages/international" id="international-service-menu"></h:link>
-				  	<h:link value="本地服务" outcome="/pages/domestic" id="domestic-service-menu"></h:link>
+				<div id="top-menu-link" style="position: absolute; bottom:0;">
+				  	<div id="icon-1" style="float:left; position: relative;">
+				  		<a href="${facesContext.externalContext.requestContextPath}/pages/international.jsf">
+				  			<img src="${facesContext.externalContext.requestContextPath}/resources/images/airplane.ico" 
+				  				alt="Seach International Service" style="border: none" />
+				  		</a>
+				  	</div>
+				  	<div id="link-1" style="position:relative; float: left;margin-top: 10px;padding-left: 0px;text-align: left;margin-left: 0em;">
+				  		<h:link value="国际服务" outcome="/pages/international"
+				  			 id="international-search-menu-link" title="Search International Service"></h:link>
+				  	</div>
+				  	
+				  	<div id="icon-2" style="float:left; position: relative; margin-left: 1em">
+				  		<a href="${facesContext.externalContext.requestContextPath}/pages/domestic.jsf">
+				  			<img src="${facesContext.externalContext.requestContextPath}/resources/images/coach.ico" 
+				  				alt="Search Domestic Service" style="border: none"/>
+				  		</a>
+				  	</div>
+				  	
+				  	<div id="link-1" style="position:relative; float: left;margin-top: 10px;padding-left: 0px;text-align: left;margin-left: 0em;">
+				  		<h:link value="本土服务" outcome="/pages/domestic"
+				  			 id="domestic-search-menu-link" ></h:link>
+				  	</div>
 				</div>
 		</h:panelGroup>
 		<h:panelGroup id="container" layout="block" >
@@ -29,6 +64,6 @@
 			点点@gmail.com
 		</h:panelGroup>
 	</h:panelGroup>
-
+	
 </h:body>
 </html>
